@@ -35,6 +35,11 @@ def get_drinks():
     return data 
 
 
+@app.route('/drinks/<name>')
+def get_drink(name: str):
+    return {"name": name}
+
+
 if __name__ == "__main__":
     app.debug = True 
     app.run()
